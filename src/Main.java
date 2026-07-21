@@ -11,5 +11,11 @@ public class Main {
                 .filter(n -> n%2 == 0)
                 .mapToInt(Integer::intValue).sum();
         System.out.println("Sum of even numbers: " + sum);
+
+        List<String> names = List.of("Alice", "Bob", "Charlie", "David");
+        List<String> filteredNames = names.stream()
+                .filter(name -> name.length() > 3)
+                .toList();
+        System.out.println("Filtered names: " + filteredNames);
     }
 }
